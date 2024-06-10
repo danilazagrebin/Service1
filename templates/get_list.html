@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Все сотрудники
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Сотрудники</h1>
+    {% if staff|length > 0 %}
+        {% for element in staff %}
+        <div class="alert alert-info">
+            <h2>{{element.name}}</h2>
+            <p>id: {{element.id}}</p>
+            <p>{{element.instrument}}</p>
+            <p><b>{{element.position}}</b></p>
+            <a href="/get_list/{{ element.id }}" class="btn btn-warning">Подробнее</a>
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>Нет добавленных сотрудников</p>
+    {% endif %}
+
+
+</div>
+{% endblock %}

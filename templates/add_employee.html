@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Инструменты24
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Добавление сотрудника</h1>
+    <form method="post">
+        <input type="text" name="name" id = "name" class="form-control" placeholder="Введите имя"><br>
+        <input type="text" name="instrument" id = "instrument" class="form-control" placeholder="Введите инструмент"><br>
+        <input type="text" name="position" id = "position" class="form-control" placeholder="Введите должность"><br>
+        <input type="submit" class="btn btn-success" value="Создать">
+    </form>
+</div>
+{% endblock %}

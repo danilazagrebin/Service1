@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Обновление сведений о сотруднике
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Обновление сведений о сотруднике</h1>
+    <form method="post">
+        <input type="text" name="name" id = "name" class="form-control" value="{{employee.name}}" placeholder="Введите имя"><br>
+        <input type="text" name="instrument" id = "instrument" class="form-control" value="{{employee.instrument}}" placeholder="Введите инструмент"><br>
+        <input type="text" name="position" id = "position" class="form-control" value="{{employee.position}}" placeholder="Введите должность"><br>
+        <input type="submit" class="btn btn-success" value="Обновить">
+    </form>
+</div>
+{% endblock %}
